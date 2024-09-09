@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "operator.h"
 
+#define show printf
+
 
 int somme(int a, int b){
 
@@ -23,7 +25,7 @@ int mul(int a, int b){
 return a*b;
 }
 
-int vAbs(int a, int b){
+static int vAbs(int a, int b){
     int res=a-b;
 return (res>0)?res:-1*(res);
 }
@@ -37,9 +39,9 @@ int mod(int a, int b){
 
 
 void afficher(int a, int b){
-printf("A + B= %d \n", somme(a, b));
-printf("|A - B|= %d \n", vAbs(a, b));
-printf("A * B= %d \n", mul(a, b));
-printf("A / B= %.2f \n", division(a, b));
-printf("A mod B= %d \n", mod(a, b));
+show("A + B= %d \n", somme(a, b));
+show("|A - B|= %d \n", vAbs(a, b));
+show("A * B= %d \n", mul(a, b));
+show("A / B= %.2f \n", division(a, b));
+show("A mod B= %d \n", mod(a, b));
 }
