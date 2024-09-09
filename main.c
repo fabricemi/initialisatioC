@@ -6,15 +6,24 @@ int somme(int a, int b);
 
 int main (){
 
-int res=somme(10,15);
+int a=0;
+int b=0;
 
-printf("res %d \n", res);
+printf("saisir a :");
+scanf("%d", &a);
+printf("saisir b :");
+scanf("%d", &b);
+
+printf("res= %d \n", somme(a, b));
+
+
 return 0;
 
 }
-
 
 int somme(int a, int b){
 
 return a+b;
 }
+
+
