@@ -4,7 +4,7 @@
 
 int somme(int a, int b);
 int mul(int a, int b);
-int sous(int a, int b);
+int vAbs(int a, int b);
 int mod(int a, int b);
 float division(int a, int b);
 int main (){
@@ -17,11 +17,11 @@ scanf("%d", &a);
 printf("saisir b :");
 scanf("%d", &b);
 
-printf("A + B= %d /n", somme(a, b));
-printf("A - B= %d /n", sous(a, b));
-printf("A * B= %d /n", mul(a, b));
-printf("A / B= %f /n", division(a, b));
-printf("A mod B= %d /n", mod(a, b));
+printf("A + B= %d ", somme(a, b));
+printf("|A - B|= %d ", vAbs(a, b));
+printf("A * B= %d ", mul(a, b));
+printf("A / B= %.2f ", division(a, b));
+printf("A mod B= %d ", mod(a, b));
 
 
 return 0;
@@ -37,8 +37,9 @@ int mul(int a, int b){
 return a*b;
 }
 
-int sous(int a, int b){
-return a-b;
+int vAbs(int a, int b){
+    int res=a-b;
+return (res>0)?res:-1*(res);
 }
 
 float division(int a, int b){
