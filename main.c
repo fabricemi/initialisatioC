@@ -6,18 +6,21 @@
 /*
 Pointeur:variable contenenant l'adresse memoire d'une autre variable
 
-monPointeur:adresse de la variable pointé
-*monPointeur:valeur de la variable
+monPointeur:adresse de la variable pointée
+*monPointeur:valeur de la variable pointée
 &monPointeur: adresse du pointeur
 
 
 */
 
 
-void inverser(int a, int b){
-    int tmp=b;
-    b=a;
-    a=tmp;
+void inverser(int *pt_a, int *pt_b){
+    int tmp=0;
+
+    tmp=*pt_b;
+
+    *pt_b=*pt_a;
+    *pt_a=tmp;
 
     }
 
@@ -36,9 +39,12 @@ printf("adresse res = %p \n", &res);
 int a=5;
 int b=7;
 
-printf("a = %d et b= %d", a, b);
-inverser(a, b);
-printf("a = %d et b= %d", a, b);
+int *pointeur_a=&a;
+int *pointeur_b=&b;
+
+printf("a = %d et b= %d \n", a, b);
+inverser(pointeur_a, pointeur_b);
+printf("a = %d et b= %d \n", a, b);
 
 return 0;
 
