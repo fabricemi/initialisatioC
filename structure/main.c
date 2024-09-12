@@ -22,7 +22,7 @@ char nom[20];
 char prenom[20];
 int age;
 
-printf("Nom ? ");
+/* printf("Nom ? ");
 scanf(" %s", nom);
 
 printf("Prenom ? ");
@@ -33,7 +33,10 @@ scanf("%d", &age);
 
 create_user(&u, nom, prenom, age);
 printf("Vous êtes  %s %s ,agé de %d ans\n", u.nom, u.prenom, u.age);
+ */
 
+
+ char nomn[]="";
 
 return 0;
 
