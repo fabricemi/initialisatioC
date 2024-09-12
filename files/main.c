@@ -6,7 +6,7 @@
 
 int main(){
 
-  encadreur(1);
+  encadreur(2);
 
 return 0;
 }
